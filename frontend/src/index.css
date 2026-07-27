@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-light text-slate-800 dark:bg-background-dark dark:text-slate-200 font-sans transition-colors duration-300;
+  }
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full transition-colors;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-700;
+}
+
+/* Custom glassmorphism details */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-effect {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 40px -5px rgba(197, 160, 89, 0.15);
+}
+
+.glow-accent {
+  box-shadow: 0 0 40px -5px rgba(217, 167, 82, 0.15);
+}
+
+/* Circular Progress Speed Curve */
+@keyframes progress-spinner {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-progress {
+  animation: progress-spinner 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
