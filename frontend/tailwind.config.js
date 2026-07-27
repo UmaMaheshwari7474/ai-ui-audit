@@ -9,11 +9,11 @@ export default {
     extend: {
       colors: {
         background: {
-          light: '#FAF9F6',
+          light: '#F2EFE9',
           dark: '#09080D',
         },
         card: {
-          light: '#FFFFFF',
+          light: '#FAF8F5',
           dark: '#131217',
         },
         brand: {

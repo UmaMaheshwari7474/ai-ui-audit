@@ -25,10 +25,10 @@
 
 /* Custom glassmorphism details */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(250, 248, 245, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(242, 239, 233, 0.6);
 }
 
 .dark .glass-effect {

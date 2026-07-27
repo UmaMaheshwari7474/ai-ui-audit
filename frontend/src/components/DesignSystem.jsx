@@ -20,7 +20,7 @@ export const Button = ({
   const variants = {
     primary: 'bg-brand-primary text-slate-950 hover:bg-[#b08c4a] shadow-sm focus:ring-2 focus:ring-brand-primary/20 focus:ring-offset-2',
     secondary: 'bg-brand-accent text-slate-950 hover:bg-[#c39446] shadow-sm focus:ring-2 focus:ring-brand-accent/20 focus:ring-offset-2',
-    outline: 'border border-slate-200 dark:border-slate-800 bg-white dark:bg-card-dark text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 focus:ring-2 focus:ring-brand-primary/20',
+    outline: 'border border-slate-200 dark:border-slate-800 bg-card-light dark:bg-card-dark text-slate-700 dark:text-slate-200 hover:bg-slate-50/60 dark:hover:bg-slate-800 focus:ring-2 focus:ring-brand-primary/20',
     danger: 'bg-brand-error text-white hover:bg-red-750 shadow-sm focus:ring-2 focus:ring-red-500/20',
     ghost: 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
   };
@@ -67,8 +67,8 @@ export const Card = ({
     <div
       onClick={onClick}
       className={`
-        bg-white dark:bg-card-dark 
-        border border-slate-100 dark:border-slate-900/60
+        bg-card-light dark:bg-card-dark 
+        border border-slate-200/50 dark:border-slate-900/60
         rounded-premium shadow-premium
         transition-all duration-300
         ${hoverable ? 'hover:shadow-premium-hover hover:-translate-y-0.5 cursor-pointer' : ''}
@@ -392,7 +392,7 @@ export const EmptyState = ({
   className = ''
 }) => {
   return (
-    <div className={`flex flex-col items-center justify-center text-center p-8 border border-dashed border-slate-200 dark:border-slate-850 rounded-premium bg-white/50 dark:bg-card-dark/50 ${className}`}>
+    <div className={`flex flex-col items-center justify-center text-center p-8 border border-dashed border-slate-200 dark:border-slate-850 rounded-premium bg-card-light/50 dark:bg-card-dark/50 ${className}`}>
       {Icon && (
         <div className="p-4 bg-slate-50 dark:bg-slate-900 rounded-2xl text-slate-400 dark:text-slate-500 mb-4 ring-8 ring-slate-100/50 dark:ring-slate-950/20">
           <Icon className="w-8 h-8" />
